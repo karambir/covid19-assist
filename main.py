@@ -27,7 +27,7 @@ DISABLE_TEXT_REGEX = r'\s*disable|stop|pause\s*'
 
 # All the really complex configs:
 # Following says, how often we should poll CoWin APIs for age group 18+. In seconds
-MIN_18_WORKER_INTERVAL = 30
+MIN_18_WORKER_INTERVAL = 60
 # Following says, how often we should poll CoWin APIs for age group 45+. In seconds
 MIN_45_WORKER_INTERVAL = 60 * 10  # 10 minutes
 # Following decides, should we send a notification to user about 45+ or not.
