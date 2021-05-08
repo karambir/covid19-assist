@@ -18,7 +18,7 @@ from jinja2 import Template
 from peewee import SqliteDatabase, Model, DateTimeField, CharField, FixedCharField, IntegerField, BooleanField
 
 from cowinapi import CoWinAPI, VaccinationCenter, CoWinTooManyRequests
-from secrets import TELEGRAM_BOT_TOKEN, DEVELOPER_CHAT_ID
+from settings import TELEGRAM_BOT_TOKEN, DEVELOPER_CHAT_ID, SQLITE_DB_PATH
 
 PINCODE_PREFIX_REGEX = r'^\s*(pincode)?\s*(?P<pincode_mg>\d+)\s*'
 AGE_BUTTON_REGEX = r'^age: (?P<age_mg>\d+)'
@@ -50,7 +50,7 @@ logger = logging.getLogger(__name__)
 
 CoWinAPIObj = CoWinAPI()
 
-db = SqliteDatabase('users.db', pragmas={
+db = SqliteDatabase(SQLITE_DB_PATH, pragmas={
     'journal_mode': 'wal',
     'cache_size': -1 * 64000,  # 64MB
     'foreign_keys': 1,
