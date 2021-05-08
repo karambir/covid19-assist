@@ -1,18 +1,13 @@
-<div align="center">
-<h1>Cowin Assist Telegram Bot</h1>
-<br>
-<img src="https://user-images.githubusercontent.com/640792/117273073-698c2480-ae79-11eb-988f-0770728f0d2c.jpeg" width="200"/>
-</div>
+# Covid19 Vaccine India Assist Telegram Bot
 
-Check the bot here [@cowinassistbot](https://t.me/cowinassistbot).
+Check the bot here [@covid19_vaccine_india_bot](https://t.me/covid19_vaccine_india_bot).
+
+Extended from [avinassh/cowin-assist](https://github.com/avinassh/cowin-assist). Go check it out.
 
 This is a simple Telegram bot to
 
 - Check slots availability
 - Get an alert when slots become available
-- ~~Book an available slot~~
-
-all this with a single click of button.
 
 ## Note
 
@@ -28,12 +23,28 @@ You need a bot account on Telegram. Use [@BotFather](https://t.me/BotFather) to 
 
 ### System Requirements
 
-This bot is built and tested on Linux and Mac OS X. It should work on Windows machines as well, but I haven't tested it. Other requirements:
+- Docker
+- Docker Compose
 
-- Python 3 (version 3.8+)
-- SQLite 3
+### Running
 
-### Installation
+Get the code and update your data in `.env`:
+
+```shell
+git clone https://github.com/karambir/covid19-assist.git
+cd covid19-assist
+cp example.env .env
+```
+
+Then run it using docker
+
+```shell
+docker push karambir/covid19-assist:latest
+
+docker-compose up
+```
+
+### Running without Docker
 
 Install the project requirements from `requirements.txt`:
 
@@ -50,8 +61,6 @@ $ python main.py
 2021-05-06 09:59:29,239 - __main__ - INFO - starting a bg worker - periodic_background_worker
 2021-05-06 09:59:29,239 - apscheduler.scheduler - INFO - Scheduler started
 ```
-
-You may use the `supervisor.conf` provided for deployment using [Supervisord](http://supervisord.org/).
 
 ## Development
 
