@@ -154,12 +154,12 @@ def start(update: Update, _: CallbackContext) -> None:
     Handles /start, the very first message the user gets whenever they start interacting with this bot
     """
     msg = """Hey there!👋
-Welcome to CoWin Assist bot. 
+Welcome to Covid19 Vaccine India Assist bot. 
 
-I will weekly check slots availability in your area and alert you when one becomes available. To start either click 
+It will weekly check slots availability in your area and alert you when one becomes available. To start either click 
 🔔 *Setup Alert* or 🔍 *Check Open Slots*.
 
-If you are a first time user I will ask for your age and pincode."""
+If you are a first time user it will ask for your age and pincode."""
     update.message.reply_text(msg, reply_markup=get_main_keyboard(), parse_mode="markdown")
 
 
@@ -229,7 +229,7 @@ def help_command(update: Update, ctx: CallbackContext) -> None:
 
 def privacy_policy_handler(update: Update, _: CallbackContext):
     header = "🔒 Privacy Policy\n\n"
-    msg = F"CoWin Assist Bot stores minimal and only the information which is necessary. This includes:\n" \
+    msg = F"Covid19 Assist Bot stores minimal and only the information which is necessary. This includes:\n" \
           "  • Telegram account user id ({id})\n" \
           "  • The pincode to search in CoWin site\n" \
           "  • Age preference\n" \
