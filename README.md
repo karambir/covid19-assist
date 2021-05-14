@@ -1,7 +1,5 @@
 # Covid19 Vaccine India Assist Telegram Bot
 
-Check the bot here [@covid19_vaccine_india_bot](https://t.me/covid19_vaccine_india_bot).
-
 Extended from [avinassh/cowin-assist](https://github.com/avinassh/cowin-assist). Go check it out.
 
 This is a simple Telegram bot to
